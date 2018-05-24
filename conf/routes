@@ -13,4 +13,17 @@ GET     /message                    controllers.AsyncController.message
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-      
+# add routes
+GET /sample1        controllers.SampleController.sample1
+GET /sample2        controllers.SampleController.sample2
+GET /sample3/:id    controllers.SampleController.sample3(id:Long)
+GET /sample4/*path  controllers.SampleController.sample4(path)
+GET /sample5  controllers.SampleController.sample5(fixedValued = "fixed")
+GET /sample6  controllers.SampleController.sample6(defaultValue:Int ?=1)
+GET /sample7  controllers.SampleController.sample7(optValue:Option[String])
+
+GET /setSession    controllers.SessionController.setSession
+GET /getSession    controllers.SessionController.getSession
+
+GET /setFlash    controllers.SessionController.setFlash
+GET /getFlash    controllers.SessionController.getFlash
