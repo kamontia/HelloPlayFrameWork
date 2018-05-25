@@ -1,0 +1,13 @@
+@(userForm: Form[User])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+@import helper._
+@main("entry user") {
+    <h1>Entry user</h1>
+    @helper.form(action = routes.UserController.entrySubmit) {
+        <filedset>
+            <legend>input user info.</legend>
+            @helper.inputText(userForm("name"))
+            @helper.inputText(userForm("email"))
+        </filedset>
+        <input type ="submit" value="entry">
+    }
+}
