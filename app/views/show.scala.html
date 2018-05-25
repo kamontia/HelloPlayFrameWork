@@ -1,0 +1,6 @@
+@(message:String,userList:List[String])
+@import tags.iterateTag
+@main("show scala templates"){
+    <h1>@message</h1>
+    @iterateTag(userList)
+}

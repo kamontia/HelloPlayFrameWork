@@ -27,3 +27,5 @@ GET /getSession    controllers.SessionController.getSession
 
 GET /setFlash    controllers.SessionController.setFlash
 GET /getFlash    controllers.SessionController.getFlash
+
+GET /show        controllers.TemplateController.show()

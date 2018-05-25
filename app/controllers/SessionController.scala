@@ -5,11 +5,11 @@ import play.api.mvc._
 
 class SessionController extends InjectedController {
 
-  def setSession = Action { implicit request =>
+  def setSession = Action { request =>
     Ok("save session.").withSession("date" -> new java.util.Date().toString())
   }
 
-  def getSession = Action { implicit request =>
+  def getSession = Action {  request =>
     request.session.get("date").map { a =>
       Ok("save session page access time:" + a)
     }.getOrElse {
