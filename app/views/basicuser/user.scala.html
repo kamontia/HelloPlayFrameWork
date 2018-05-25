@@ -1,0 +1,11 @@
+@(userForm: Form[UserData])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+@import helper._
+@main("entry user") {
+    <h1>Entry user</h1>
+    @helper.form(action = routes.BasicUserController.index()){
+
+            @helper.inputText(userForm("name"))
+            @helper.inputText(userForm("age"))
+        @*<input type ="submit" value="entry">*@
+    }
+}

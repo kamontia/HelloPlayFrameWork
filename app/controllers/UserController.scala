@@ -14,10 +14,10 @@ class UserController @Inject()(cc: ControllerComponents)
   )
 
   /* Function initial view */
-  def entryInit = Action {
-    val filledForm = userForm.fill(User("user name", "email address"))
-    Ok(views.html.user.entry(filledForm))
-  }
+//  def entryInit = Action {
+//    val filledForm = userForm.fill(User("user name", "email address"))
+//    Ok(views.html.user.entry(filledForm))
+//  }
 
   /* Function entry user information view */
   def entrySubmit = Action { implicit request =>

@@ -30,5 +30,7 @@ GET /getFlash    controllers.SessionController.getFlash
 
 GET /show        controllers.TemplateController.show()
 
-GET     /user/enrty controllers.UserController.entryInit
-POST    /user/enrty controllers.UserController.entrySubmit
+#GET     /user/enrty controllers.UserController.entryInit
+#POST    /user/enrty controllers.UserController.entrySubmit
+
+GET /basicuser/index controllers.BasicUserController.index
