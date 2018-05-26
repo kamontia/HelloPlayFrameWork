@@ -15,3 +15,5 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 #add route
 GET     /simpleJson                 controllers.JsonController.simpleJson()
+
+GET     /asyncSample                controllers.AsyncController.index()
